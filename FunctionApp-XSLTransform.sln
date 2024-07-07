@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransformationService", "TransformationService\XSLTransformationService.csproj", "{21D45D44-0E45-45E7-A9F1-8D650E3A288C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.IsolatedFA", "Isolated\XSLTransform.IsolatedFA.csproj", "{6823FF0B-70D3-4143-B435-301B0B4BDB0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.InProcessFA", "InProcess\XSLTransform.InProcessFA.csproj", "{ED251C59-5C47-4296-8851-126847B21F18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7DC8D5A-97BB-4C7D-B0A3-F190DBA4693E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED251C59-5C47-4296-8851-126847B21F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED251C59-5C47-4296-8851-126847B21F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED251C59-5C47-4296-8851-126847B21F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED251C59-5C47-4296-8851-126847B21F18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA71FCD-00AA-4421-ACA9-7DC05B05E8C6}
+	EndGlobalSection
+EndGlobal

@@ -2,17 +2,18 @@ using Azure.Storage.Blobs;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using XSLTransformationService;
 
-namespace FunctionApp.XSLTransform;
+namespace XSLTransform.IsolatedFA;
 
 public class Function
 {
     private readonly ILogger _logger;
     private readonly IConfiguration _config;
     private readonly BlobContainerClient _blobContainerClient;
-    private readonly ITransformationClient _client;
+    private readonly ITransformationService _client;
 
-    public Function(BlobServiceClient blobService, ITransformationClient client, IConfiguration config, ILogger<Function> logger)
+    public Function(BlobServiceClient blobService, ITransformationService client, IConfiguration config, ILogger<Function> logger)
     {
         _logger = logger;
         _config = config;
@@ -31,6 +32,8 @@ public class Function
     {
         try
         {
+            _logger.LogInformation($"Processing Input File {name}.xml");
+
             // Load source xml and xslt
             _client.Load(strmSource, strmXSLT);
 

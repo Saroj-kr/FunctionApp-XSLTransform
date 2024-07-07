@@ -2,23 +2,17 @@ using System.Xml;
 using System.Xml.Xsl;
 using Microsoft.Extensions.Logging;
 
-namespace FunctionApp.XSLTransform;
+namespace XSLTransformationService;
 
-public interface ITransformationClient : IDisposable
+public class TransformationService : ITransformationService
 {
-    void Load(Stream source, Stream xsl);
-    Stream Transform();
-}
-
-public class TransformationClient : ITransformationClient
-{
-    ILogger _log;
+    private ILogger _log;
     private readonly XslCompiledTransform _xslTransform;
     XmlReader readerSource;
     XmlReader readerXSL;
     public bool _disposed;
 
-    public TransformationClient(ILogger<TransformationClient> log)
+    public TransformationService(ILogger<TransformationService> log)
     {
         _log = log;
         _xslTransform = new();
@@ -34,7 +28,6 @@ public class TransformationClient : ITransformationClient
         readerXSL = XmlReader.Create(xsl);
         _xslTransform.Load(readerXSL);
         _log.LogDebug("Loaded XSLT mapping");
-        
     }
 
     public Stream Transform()

@@ -9,9 +9,6 @@ __azurite_*.json
 __blobstorage__/
 __queuestorage__/
 
-# C# Solution files
-*.sln
-
 # User-specific files
 *.suo
 *.user
@@ -35,6 +32,10 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+
+# Visual Studio Code directory
+.vscode/
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 

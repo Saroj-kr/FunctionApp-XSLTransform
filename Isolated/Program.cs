@@ -3,8 +3,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Configuration;
+using XSLTransformationService;
 
-namespace FunctionApp.XSLTransform;
+namespace XSLTransform.IsolatedFA;
 
 public class Program
 {
@@ -19,7 +20,7 @@ public class Program
             {
                 services.AddApplicationInsightsTelemetryWorkerService();
                 services.ConfigureFunctionsApplicationInsights();
-                services.AddTransient<ITransformationClient, TransformationClient>();
+                services.AddTransient<ITransformationService, TransformationService>();
                 services.AddAzureClients(clientBuilder =>
                 {
                     clientBuilder.AddBlobServiceClient(hostContext.Configuration.GetValue<string>("AzureWebJobsStorage"));

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "FunctionApp_XSLTransform": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7200",
+      "launchBrowser": false
+    }
+  }
+}

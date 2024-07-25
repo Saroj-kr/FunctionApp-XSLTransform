@@ -5,15 +5,29 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransformationService", "TransformationService\XSLTransformationService.csproj", "{21D45D44-0E45-45E7-A9F1-8D650E3A288C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.IsolatedFA", "Isolated\XSLTransform.IsolatedFA.csproj", "{6823FF0B-70D3-4143-B435-301B0B4BDB0D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.InProcessFA", "InProcess\XSLTransform.InProcessFA.csproj", "{ED251C59-5C47-4296-8851-126847B21F18}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7DC8D5A-97BB-4C7D-B0A3-F190DBA4693E}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arm", "arm", "{28814D5A-8DD0-403D-8F5A-EA7653AF5D1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "isolated", "isolated", "{8D3C25A9-ABEC-4868-B79B-7A04370DD148}"
+	ProjectSection(SolutionItems) = preProject
+		arm\Isolated\azuredeploy.bicep = arm\Isolated\azuredeploy.bicep
+		arm\Isolated\azuredeploy.bicepparam = arm\Isolated\azuredeploy.bicepparam
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inprocess", "inprocess", "{3C6B9DF7-6F32-4861-BFAA-8D07A3276BF8}"
+	ProjectSection(SolutionItems) = preProject
+		arm\In-Process\azuredeploy.bicep = arm\In-Process\azuredeploy.bicep
+		arm\In-Process\azuredeploy.bicepparam = arm\In-Process\azuredeploy.bicepparam
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.InProcessFA", "XSLTransform.InProcessFA\XSLTransform.InProcessFA.csproj", "{3BEC9371-A4E0-44CD-95C4-11777420CEB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XSLTransform.IsolatedFA", "XSLTransform.IsolatedFA\XSLTransform.IsolatedFA.csproj", "{777344AC-D226-459B-A67C-8A8309379015}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,17 +39,21 @@ Global
 		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D45D44-0E45-45E7-A9F1-8D650E3A288C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6823FF0B-70D3-4143-B435-301B0B4BDB0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED251C59-5C47-4296-8851-126847B21F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED251C59-5C47-4296-8851-126847B21F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED251C59-5C47-4296-8851-126847B21F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED251C59-5C47-4296-8851-126847B21F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEC9371-A4E0-44CD-95C4-11777420CEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEC9371-A4E0-44CD-95C4-11777420CEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEC9371-A4E0-44CD-95C4-11777420CEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEC9371-A4E0-44CD-95C4-11777420CEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777344AC-D226-459B-A67C-8A8309379015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777344AC-D226-459B-A67C-8A8309379015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777344AC-D226-459B-A67C-8A8309379015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777344AC-D226-459B-A67C-8A8309379015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D3C25A9-ABEC-4868-B79B-7A04370DD148} = {28814D5A-8DD0-403D-8F5A-EA7653AF5D1C}
+		{3C6B9DF7-6F32-4861-BFAA-8D07A3276BF8} = {28814D5A-8DD0-403D-8F5A-EA7653AF5D1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBA71FCD-00AA-4421-ACA9-7DC05B05E8C6}

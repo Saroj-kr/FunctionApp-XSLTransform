@@ -29,7 +29,7 @@ public class Function
     [FunctionName(nameof(Function))]
     public async Task Run(
             [BlobTrigger("%xsltransformcontainer%/%sourceFolder%/{name}.xml")] Stream strmSource,
-            [Blob("%xsltransformcontainer%/%MapName%", FileAccess.Read)] Stream strmXSLT,
+            [Blob("%xsltransformcontainer%/%mapName%", FileAccess.Read)] Stream strmXSLT,
             [Blob("%xsltransformcontainer%/%destinationFolder%/{name}-output.xml", FileAccess.Write)] BlobClient blobDestination,
             string name
         )

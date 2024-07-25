@@ -24,3 +24,5 @@ The FunctionApp needs following inputs from App Settions:
 ## Authorization
 - FunctionApp currently uses Azure Storage connection string for read/write operation in Blob Storage. 
 
+## Deployment
+You can deploy the FunctionApp using the provided Bicep code
